@@ -1,19 +1,14 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
-import { Text, View } from 'react-native';
 
 import { globalStyle } from '../assets/styles/globalStyles';
+import {
+    NoticiaDetalle,
+    NoticiasGeneral,
+} from '../screens/Noticias';
 
 
 const Stack = createNativeStackNavigator();
-
-function HomeScreen() {
-    return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text>Home Screen</Text>
-        </View>
-    );
-}
 
 export const MainNavigator = () => {
 
@@ -21,7 +16,7 @@ export const MainNavigator = () => {
         <Stack.Navigator initialRouteName="Home">
             <Stack.Screen
                 name="Home"
-                component={HomeScreen}
+                component={NoticiasGeneral}
                 options={{
                     title: 'Noticias del mundo',
                     headerStyle: globalStyle.color_primario,
@@ -31,7 +26,7 @@ export const MainNavigator = () => {
             />
             <Stack.Screen
                 name="Detalles"
-                component={HomeScreen}
+                component={NoticiaDetalle}
                 options={{
                     title: 'Detalles',
                     headerStyle: globalStyle.color_primario,
