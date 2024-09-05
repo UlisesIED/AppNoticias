@@ -43,7 +43,8 @@ export const styles = StyleSheet.create({
     },
     conteiner_image: {
         flex: globalStyle.col_4.flex,
-
+        borderRightColor: globalStyle.accento.color,
+        borderRightWidth: 1.15,
     },
     image_style: {
         width: '100%',

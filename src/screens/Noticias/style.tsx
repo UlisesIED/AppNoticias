@@ -41,6 +41,7 @@ export const styles = StyleSheet.create({
         shadowOpacity: 0.5,
         shadowRadius: 4,
         elevation: 20, // Android
+        objectFit: 'contain',
     },
     view_contenido_noticia: {
         marginVertical: 18,
