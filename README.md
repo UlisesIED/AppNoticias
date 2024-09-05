@@ -1,79 +1,68 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Procedimiento de creación y documentación.
 
-# Getting Started
+## Dependencias previamente instaladas para la correcta utilización
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+* <a href="https://nodejs.org/en/download/package-manager" target="_blank">Node.Js</a> 
+* <a href="https://metrobundler.dev/" target="_blank">Metro</a>
+* <a href="https://developer.android.com/studio?hl=es-419" target="_blank">Android Studio</a>
+* Preconfiguración de <a href="https://reactnative.dev/docs/set-up-your-environment" target="_blank">React native</a>
 
-## Step 1: Start the Metro Server
+## Configuración del entorno de trabajo y proyecto.
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+### Creación del proyecto.
 
-To start Metro, run the following command from the _root_ of your React Native project:
+      npx @react-native-community/cli@latest init NewsApp
 
-```bash
-# using npm
-npm start
+### levantamiento de servidor local.
 
-# OR using Yarn
-yarn start
-```
+En primer lugar abrimos 2 terminales y nos dirigiremos en cada una a la carpeta que se nos creo al crear el proyecto.
 
-## Step 2: Start your Application
+La primer terminal tendrá el servidor de metro para levantarlo usamos el siguiente comando:
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+#### Iniciar Metro
 
-### For Android
+      npm start
 
-```bash
-# using npm
-npm run android
+#### Iniciar el proyecto
 
-# OR using Yarn
-yarn android
-```
+En la segunda terminal instala las dependencias de NPM con 
 
-### For iOS
+      npm install
 
-```bash
-# using npm
-npm run ios
+y despues levanta el servidor
 
-# OR using Yarn
-yarn ios
-```
+      npm run android
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+## Consideraciones del desarrollo
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+La API proporcionada para la obtención de los datos en algunos casos manda información incompleta o simplemente no manda nada, se debe tener en cuenta esa situación, doy un ejemplo, usando la siguiente URL
+https://newsapi.org/v2/top-headlines?country=mx&apiKey=f129bf5597f14222b83616f8d244642f
 
-## Step 3: Modifying your App
+         {
+            status	      "ok"
+            totalResults	0
+            articles	   []
+         }
+      
+y asi dependiendo de la solicitud
 
-Now that you have successfully run the app, let's modify it.
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+## Documentación
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+Los componentes creados tienen su correspondiente documentación para que puedan ser leídos.
 
-## Congratulations! :tada:
+## Inconvenientes
 
-You've successfully run and modified your React Native App. :partying_face:
+Durante el desarrollo de la aplicación hubieron distintas fallas, para poder tener un control de estas fallas se agrego una rama adicional git, la cual permite si en dado caso hay un error en la implementación de paqueterias, procesos y/o algún archivo que sea vital para el correcto funcionamiento, solo retornamos a la rama principal para evitar ese problema.
 
-### Now what?
+### Error con los ICONS
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+En este error, añadí mal una paqueteria, asi que para solucionarlo solamente eliminé y reinstale toda la paqueteria correspondiente.
 
-# Troubleshooting
+### Error en el  splash screen 
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+Cómo era la primera vez que hacia algo asi, busqué como realizarlo, sin embargo, la mayoria de recursos que encontre estaban desactualizados y/o no funcionaban por falta de mantenimiento hasta que encontré un tutorial de como realizarlo de manera nativa y sin nada de terceros. <a href = 'https://medium.com/react-native-development/change-splash-screen-in-react-native-android-app-74e6622d699' target='_blank'>Link del tutorial</a>
 
-# Learn More
 
-To learn more about React Native, take a look at the following resources:
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+
