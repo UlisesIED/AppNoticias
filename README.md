@@ -1,5 +1,8 @@
 # Procedimiento de creación y documentación.
 
+## Archivo APK 
+Esta en el repositorio con el nombre de: appNotcia.apk
+
 ## Dependencias previamente instaladas para la correcta utilización
 
 * <a href="https://nodejs.org/en/download/package-manager" target="_blank">Node.Js</a> 
