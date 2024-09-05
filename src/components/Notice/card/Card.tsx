@@ -6,6 +6,21 @@ import { globalStyle } from '../../../assets/styles/globalStyles';
 import { Separador } from '../../common';
 import { styles } from './style';
 
+/**
+ * Calcula el área de un círculo.
+ * @param {Object} noticia - El radio del círculo.
+ *  - {object} source
+ *  - {int} status
+ *  - {string} author
+ *  - {string} title
+ *  - {string} description
+ *  - {string} url
+ *  - {string} urlToImage
+ *  - {string} publishedAt
+ *  - {string} content
+ * @returns {JSX.Element} El área del círculo.
+ */
+
 export const Card = (props: any) => {
 
     const { noticia, navigation } = props;

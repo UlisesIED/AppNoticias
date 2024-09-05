@@ -7,6 +7,18 @@ import {
     NoticiasGeneral,
 } from '../screens/Noticias';
 
+/**
+ * Navegador principal de la aplicación.
+ *
+ * Este componente define la estructura de navegación para la aplicación utilizando
+ * un stack navigator. Incluye dos pantallas principales:
+ * 
+ * 1. **Home**: Muestra una lista de noticias generales.
+ * 2. **Detalles**: Muestra detalles de una noticia específica.
+ *
+ * @component
+ * @returns {JSX.Element} El componente de navegación principal con dos pantallas.
+ */
 
 const Stack = createNativeStackNavigator();
 
